@@ -1,7 +1,7 @@
 # theclub_doc
 docs
 
-# Authorization
+# Authentication
 
 Authorize user with EMAIL and PASSWORD.
 ~~~bash
