@@ -9,7 +9,7 @@ POST http://localhost:3000/api/auth/sign_in
 ~~~
 Access-token and client in response headers
 
-# User profile
+# User's profile
 Get current_user info
 ~~~bash
 GET http://localhost:3000/api/cabinet
@@ -91,6 +91,52 @@ GET http://localhost:3000/api/transports
 Get all posts. Add parameter "page":"1" for pagination 
 ~~~bash
 GET http://localhost:3000/api/transports
+~~~
+
+Response
+~~~bash
+[
+  {
+    "id":51,
+    "user_id":10,
+    "text":"http://vimeo.com/109141765",
+    "created_at":"2015-02-06T02:05:21.903+03:00",
+    "updated_at":"2016-01-25T13:40:33.790+03:00",
+    "latitude":null,
+    "longitude":null,
+    "address":"",
+    "map_zoom":null,
+    "postable_type":"Member",
+    "postable_id":12,
+    "pop_club":75,
+    "pop_garage":null,
+    "pop_company":null,
+    "pop_community":null,
+    "status":"none",
+    "pop_featured":null,
+    "popular_at":"2015-02-06T02:05:21.903+03:00"
+  },
+  {
+    "id":313,
+    "user_id":10,
+    "text":"See the incredible cars of Pebble Beach's multimillion-dollar ......",
+    "created_at":"2015-08-23T03:03:55.690+03:00",
+    "updated_at":"2016-01-25T13:40:34.518+03:00",
+    "latitude":null,
+    "longitude":null,
+    "address":"",
+    "map_zoom":null,
+    "postable_type":"Member",
+    "postable_id":12,
+    "pop_club":18,
+    "pop_garage":null,
+    "pop_company":null,
+    "pop_community":null,
+    "status":"none",
+    "pop_featured":null,
+    "popular_at":"2015-08-23T03:03:55.690+03:00"
+  }
+]
 ~~~
 
 # User's Posts
