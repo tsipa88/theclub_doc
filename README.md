@@ -2,7 +2,7 @@
 docs
 
 ```
-#!ruby
+
 
 // DB //
 rake db:remake (:drop, :create, :migrate)
