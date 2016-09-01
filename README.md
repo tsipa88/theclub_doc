@@ -21,6 +21,8 @@ Get current_user transport. Add parameter "self":"true"
 GET http://localhost:3000/api/transports
 ~~~
 
+Response:
+~~~bash
 [
   {
     "id":165,
@@ -77,7 +79,7 @@ GET http://localhost:3000/api/transports
     "target"
   }
 ]
-
+~~~
 
 # All Transports
 Get all transports. Add parameter "page":"1" for pagination 
