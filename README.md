@@ -90,7 +90,7 @@ GET http://localhost:3000/api/transports
 # All Posts
 Get all posts. Add parameter "page":"1" for pagination 
 ~~~bash
-GET http://localhost:3000/api/transports
+GET http://localhost:3000/api/posts
 ~~~
 
 Response
@@ -142,7 +142,7 @@ Response
 # User's Posts
 Get current_user transport. Add parameter "self":"true" 
 ~~~bash
-GET http://localhost:3000/api/transports
+GET http://localhost:3000/api/posts
 ~~~
 
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
