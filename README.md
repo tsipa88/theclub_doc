@@ -1,5 +1,5 @@
-# theclub_doc
-docs
+# clubdoc
+
 
 # Authentication
 
