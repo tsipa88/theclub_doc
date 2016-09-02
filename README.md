@@ -3,7 +3,7 @@
 
 # Authentication
 
-Authorize user with EMAIL and PASSWORD.
+Authentication user with EMAIL and PASSWORD.
 ~~~bash
 POST http://localhost:3000/api/auth/sign_in
 ~~~
@@ -93,12 +93,12 @@ Get all posts. Add parameter "page":"1" for pagination
 GET http://localhost:3000/api/posts
 ~~~
 # Current User's Posts
-Get current_user transport. Add parameter "self":"true" 
+Get current_user posts. Add parameter "self":"true", parameter "page" for pagination
 ~~~bash
 GET http://localhost:3000/api/posts
 ~~~
 # User's Posts
-Get current_user transport. Add parameter "user_id":"1" 
+Get another user's post. Add parameter "user_id":"1", parameter "page" for pagination
 ~~~bash
 GET http://localhost:3000/api/posts
 ~~~
