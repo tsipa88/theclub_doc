@@ -92,58 +92,66 @@ Get all posts. Add parameter "page":"1" for pagination
 ~~~bash
 GET http://localhost:3000/api/posts
 ~~~
-
-Response
-~~~bash
-[
-  {
-    "id":51,
-    "user_id":10,
-    "text":"http://vimeo.com/109141765",
-    "created_at":"2015-02-06T02:05:21.903+03:00",
-    "updated_at":"2016-01-25T13:40:33.790+03:00",
-    "latitude":null,
-    "longitude":null,
-    "address":"",
-    "map_zoom":null,
-    "postable_type":"Member",
-    "postable_id":12,
-    "pop_club":75,
-    "pop_garage":null,
-    "pop_company":null,
-    "pop_community":null,
-    "status":"none",
-    "pop_featured":null,
-    "popular_at":"2015-02-06T02:05:21.903+03:00"
-  },
-  {
-    "id":313,
-    "user_id":10,
-    "text":"See the incredible cars of Pebble Beach's multimillion-dollar ......",
-    "created_at":"2015-08-23T03:03:55.690+03:00",
-    "updated_at":"2016-01-25T13:40:34.518+03:00",
-    "latitude":null,
-    "longitude":null,
-    "address":"",
-    "map_zoom":null,
-    "postable_type":"Member",
-    "postable_id":12,
-    "pop_club":18,
-    "pop_garage":null,
-    "pop_company":null,
-    "pop_community":null,
-    "status":"none",
-    "pop_featured":null,
-    "popular_at":"2015-08-23T03:03:55.690+03:00"
-  }
-]
-~~~
-
-# User's Posts
+# Current User's Posts
 Get current_user transport. Add parameter "self":"true" 
 ~~~bash
 GET http://localhost:3000/api/posts
 ~~~
+# User's Posts
+Get current_user transport. Add parameter "user_id":"1" 
+~~~bash
+GET http://localhost:3000/api/posts
+~~~
+Response
+~~~bash
+{
+  "id":1,
+  "user_id":1,
+  "user_name":"John",
+  "user_surname":"Doe",
+  "user_avatar":"/system/avatar/781/4675.jpg",
+  "photos":[],
+  "likes":[
+            {
+              "id":1,
+              "user_id":1,
+              "user_name":"John",
+              "user_surname":"Doe",
+              "user_avatar":"/system/avatar/1/image.jpg",
+              "created_at":"2015-04-23T17:09:09.394+03:00",
+              "updated_at":"2015-04-23T17:09:09.394+03:00"
+            }
+          ],
+  "comments":[
+              {
+                "id":1,
+                "user_id":1,
+                "commentable_id":1,
+                "commentable_type":"Post",
+                "text":"lorem ipsum dolor sit amet consectetur adipiscing elit",
+                "created_at":"2015-02-27T05:54:41.465+03:00",
+                "updated_at":"2015-02-27T05:54:41.465+03:00"
+              }
+             ],
+  "text":"lorem ipsum dolor sit amet consectetur adipiscing elit ...",
+  "created_at":"2015-02-06T02:05:21.903+03:00",
+  "updated_at":"2016-01-25T13:40:33.790+03:00",
+  "latitude":null,
+  "longitude":null,
+  "address":"",
+  "map_zoom":null,
+  "postable_type":"Member",
+  "postable_id":1,
+  "pop_club":1,
+  "pop_garage":null,
+  "pop_company":null,
+  "pop_community":null,
+  "status":"none",
+  "pop_featured":null,
+  "popular_at":"2015-02-06T02:05:21.903+03:00" 
+}
+~~~
+
 
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
 
