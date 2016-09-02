@@ -3,7 +3,7 @@
 
 # Authentication
 
-Authentication user with EMAIL and PASSWORD.
+Authenticate user with EMAIL and PASSWORD.
 ~~~bash
 POST http://localhost:3000/api/auth/sign_in
 ~~~
