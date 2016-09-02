@@ -15,76 +15,84 @@ Get current_user info
 GET http://localhost:3000/api/cabinet
 ~~~
 
+# Current User's transports
+Get current_user transports. Add parameter "self":"true" 
+~~~bash
+GET http://localhost:3000/api/transports
+~~~
 # User's transports
-Get current_user transport. Add parameter "self":"true" 
+Get another user's transports. Add parameter "user_id":"1", parameter "page" for pagination
+~~~bash
+GET http://localhost:3000/api/transports
+~~~
+# All Transports
+Get all transports. Add parameter "page":"1" for pagination 
 ~~~bash
 GET http://localhost:3000/api/transports
 ~~~
 
 Response:
 ~~~bash
-[
-  {
-    "id":165,
-    "user_id":10,
-    "model":"11",
-    "created_at":"2015-06-28T20:41:57.829+03:00",
-    "updated_at":"2015-09-07T12:59:37.604+03:00",
-    "manufacturer_id":6,
-    "engine_id":5,
-    "transmission_id":null,
-    "state":"declined",
-    "specifications":
-    {
-      "about":"",
-      "power":"1",
-      "max_speed":"",
-      "wheel_drive":"rear",
-      "acceleration":"",
-      "engine_volume":"1",
-      "production_year":"2015"
-    },
-    "kind":"ground",
-    "accepted_at":null,
-    "rank":1,
-    "top_number":0,
-    "purpose":"general"
-  },
-
-  {
-    "id":6,
-    "user_id":10,
-    "model":"SLS AMG",
-    "created_at":"2015-01-27T15:25:59.039+03:00",
-    "updated_at":"2015-10-09T17:00:57.551+03:00",
-    "manufacturer_id":29,
-    "engine_id":4,
-    "transmission_id":3,
-    "state":"accepted",
-    "specifications":
-    {
-      "about":"Wow!)",
-      "power":"583",
-      "max_speed":"317",
-      "wheel_drive":"rear",
-      "acceleration":"3.8",
-      "engine_volume":"6.2",
-      "production_year":"2015"
-    },
-    "kind":"ground",
-    "accepted_at":"2015-01-27T15:27:19.954+03:00",
-    "rank":1,
-    "top_number":0,
-    "purpose":
-    "target"
-  }
-]
-~~~
-
-# All Transports
-Get all transports. Add parameter "page":"1" for pagination 
-~~~bash
-GET http://localhost:3000/api/transports
+{
+  "id":1,
+  "user_id":1,
+  "user_name":"John",
+  "user_surname":"Doe",
+  "user_avatar":"/system/avatar/903/image.jpg",
+  "avatars":[
+              {
+                "image":"/system/avatar/900/image.jpg","current":true
+              }
+            ],
+  "backgrounds":[
+                  {
+                    "image":"/system/avatar/900/image.jpg","current":true
+                  }
+            ],
+  "likes":[
+            {
+              "id":1,
+              "user_id":1,
+              "user_name":"John",
+              "user_surname":"Doe",
+              "user_avatar":"/system/avatar/1/image.jpg",
+              "created_at":"2015-04-23T17:09:09.394+03:00",
+              "updated_at":"2015-04-23T17:09:09.394+03:00"
+            }
+          ],
+  "comments":[
+              {
+                "id":1,
+                "user_id":1,
+                "commentable_id":1,
+                "commentable_type":"Post",
+                "text":"lorem ipsum dolor sit amet consectetur adipiscing elit",
+                "created_at":"2015-02-27T05:54:41.465+03:00",
+                "updated_at":"2015-02-27T05:54:41.465+03:00"
+              }
+             ],
+  "created_at":"2015-09-08T19:40:32.147+03:00",
+  "updated_at":"2015-09-14T17:48:44.340+03:00",
+  "model":"Escalate",
+  "manufacturer":"Cadillac",
+  "engine":"Бензин атмосферный",
+  "transmission":"Автомат",
+  "state":"declined",
+  "specifications":{
+                    "about":"",
+                    "power":"405",
+                    "max_speed":"270",
+                    "wheel_drive":"all_permanent",
+                    "acceleration":"6,5",
+                    "engine_volume":"6,2",
+                    "production_year":"2010"
+                   },
+  "kind":"ground",
+  "accepted_at":null,
+  "rank":1,
+  "top_number":0,
+  "purpose":"general"
+}
 ~~~
 
 # All Posts
