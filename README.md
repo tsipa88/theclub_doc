@@ -110,7 +110,13 @@ Response
   "user_name":"John",
   "user_surname":"Doe",
   "user_avatar":"/system/avatar/781/4675.jpg",
-  "photos":[],
+  "photos":[
+            {
+              "image":"/system/posts/photo/image/279/image.jpg"
+            },{
+              "image":"/system/posts/photo/image/282/image.jpg"
+            }
+           ],
   "likes":[
             {
               "id":1,
