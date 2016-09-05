@@ -179,6 +179,8 @@ GET http://localhost:3000/api/profiles
 ~~~
 
 ~~~bash
+
+Response
 [
   {
     "id":1,
