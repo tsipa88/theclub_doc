@@ -166,14 +166,14 @@ Response
 }
 ~~~
 
-# Get Current User's friendly Profiles
-Add parameter "page":"1" for pagination.
+# Current User's friendly Profiles
+Get Current User's friendly Profiles. Add parameter "page":"1" for pagination.
 ~~~bash
 GET http://localhost:3000/api/profiles
 ~~~
 
-# Get another User's friendly Profiles
-Add parameter User's id for "profile_id""
+# User's friendly Profiles
+Get another User's friendly Profiles. Add parameter User's id for "profile_id""
 ~~~bash
 GET http://localhost:3000/api/profiles
 ~~~
@@ -210,20 +210,20 @@ Response
 ]
 ~~~
 
-# Get Current User's Communities list
-Add parameter "self":"true", parameter "page":"1" for pagination. 
+# Current User's Communities list
+Get Current User's Communities list. Add parameter "self":"true", parameter "page":"1" for pagination. 
 ~~~bash
 GET http://localhost:3000/api/communities
 ~~~
 
-# Get another User's friendly Communities list
-Add parameter "user_id", parameter "page":"1" for pagination. 
+# User's friendly Communities list
+Get another User's Communitites list. Add parameter "user_id", parameter "page":"1" for pagination. 
 ~~~bash
 GET http://localhost:3000/api/communities
 ~~~
 
-# Get All Communities list
-Add parameter "page":"1" for pagination. 
+# All Communities list
+Get all Communities. Add parameter "page":"1" for pagination. 
 ~~~bash
 GET http://localhost:3000/api/communities
 ~~~
