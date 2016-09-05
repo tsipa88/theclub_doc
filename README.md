@@ -210,7 +210,52 @@ Response
 ]
 ~~~
 
+# Get Current User's Communities list
+Add parameter "self":"true", parameter "page":"1" for pagination. 
+~~~bash
+GET http://localhost:3000/api/communities
+~~~
 
+# Get another User's friendly Communities list
+Add parameter "user_id", parameter "page":"1" for pagination. 
+~~~bash
+GET http://localhost:3000/api/communities
+~~~
+
+# Get All Communities list
+Add parameter "page":"1" for pagination. 
+~~~bash
+GET http://localhost:3000/api/communities
+~~~
+
+Response
+~~~bash
+[
+  {
+    "id":1,
+    "name":"Porsche Club",
+    "nickname":"pclb",
+    "site":"http://porsche-club.com",
+    "description":"Grand Porsche Club",
+    "category_id":2,
+    "category":"Автомобили",
+    "rank":1,
+    "created_at":"2015-02-16T14:29:21.534+03:00",
+    "updated_at":"2015-02-25T12:28:30.719+03:00"
+  },{
+    "id":2,
+    "name":"Mersedes-Benz Club",
+    "nickname":"mb_clb",
+    "site":"http://m-b.club",
+    "description":"MB clubbb",
+    "category_id":6,
+    "category":"Автомобили",
+    "rank":1,
+    "created_at":"2015-02-24T12:44:11.757+03:00",
+    "updated_at":"2015-02-25T12:34:29.958+03:00"
+  }
+]
+~~~
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
 
 
