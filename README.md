@@ -302,6 +302,36 @@ Response
 ]
 ~~~
 
+# All Companies
+Get all Companies. Add parameter "page":"1" for pagination 
+~~~bash
+GET http://localhost:3000/api/companies
+~~~
+
+Response
+~~~bash
+[
+  {
+    "id":1,
+    "name":"Avalon LoreM",
+    "nickname":"avalor",
+    "site":"http://avalor.ru",
+    "email":"info@avalor.ru",
+    "phone":"+7777787777",
+    "address":"Волгоградский пр.003 к5",
+    "description":"Avalor - все авто!",
+    "created_at":"2015-02-20T16:59:11.473+03:00",
+    "updated_at":"201502-25T12:28:31.952+03:00",
+    "category_id":1,
+    "rank":1,
+    "meta_description":null,
+    "meta_keywords":null
+  }
+]
+~~~
+
+
+
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
 
 
