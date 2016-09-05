@@ -166,6 +166,16 @@ Response
 }
 ~~~
 
+# Get Current User's friendly Profiles
+Add parameter "page":"1" for pagination.
+~~~bash
+GET http://localhost:3000/api/profiles
+~~~
+
+# Get another User's friendly Profiles
+Add parameter User's id for "profile_id""
+~~~bash
+GET http://localhost:3000/api/profiles
 
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
 
