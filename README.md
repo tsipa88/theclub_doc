@@ -268,7 +268,7 @@ Get current_user Advertisements. Add parameter "self":"true", parameter "page" f
 GET http://localhost:3000/api/advertisements
 ~~~
 # User's Advertisements
-Get another user's post. Add parameter "user_id":"1", parameter "page" for pagination
+Get another user's Advertisements. Add parameter "user_id":"1", parameter "page" for pagination
 ~~~bash
 GET http://localhost:3000/api/advertisements
 ~~~
