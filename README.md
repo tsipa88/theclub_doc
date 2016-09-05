@@ -256,6 +256,52 @@ Response
   }
 ]
 ~~~
+
+# All Advertisements
+Get all Advertisements. Add parameter "page":"1" for pagination 
+~~~bash
+GET http://localhost:3000/api/advertisements
+~~~
+# Current User's Advertisements
+Get current_user Advertisements. Add parameter "self":"true", parameter "page" for pagination
+~~~bash
+GET http://localhost:3000/api/advertisements
+~~~
+# User's Advertisements
+Get another user's post. Add parameter "user_id":"1", parameter "page" for pagination
+~~~bash
+GET http://localhost:3000/api/advertisements
+~~~
+Response
+~~~bash
+[
+  {
+    "id":1,
+    "user_id":1,
+    "category_id":1,
+    "name":"Pranck Miller Square 6010 K SC",
+    "avatars":[
+                {
+                  "image":"/system/avatar/198/IMG_1621.JPG",
+                  "current":true
+                },{
+                  "image":"/system/avatar/197/IMG_1620.JPG",
+                  "current":false
+                  }
+              ],
+    "price_on_demand":false,
+    "about":"Lorem ipsum dolor ...",
+    "city":"Москва",
+    "country":"Россия",
+    "email":"",
+    "phone":"+79099780222",
+    "state":"active",
+    "created_at":"2015-03-11T13:08:17.132+03:00",
+    "updated_at":"2015-03-11T13:17:32.463+03:00"
+  }
+]
+~~~
+
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
 
 
