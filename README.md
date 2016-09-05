@@ -176,6 +176,38 @@ GET http://localhost:3000/api/profiles
 Add parameter User's id for "profile_id""
 ~~~bash
 GET http://localhost:3000/api/profiles
+~~~
+
+~~~bash
+[
+  {
+    "id":1,
+    "user_name":"John",
+    "user_surname":"Doe",
+    "user_avatar":"/system/avatar/1175.jpg",
+    "user_nickname":"john77",
+    "gender":"female",
+    "birthdate":"1988-05-04",
+    "status":"Hello world!",
+    "rank":1,
+    "top_number":0,
+    "kind":"simple"
+  },{
+    "id":2,
+    "user_name":"John",
+    "user_surname":"Doe",
+    "user_avatar":"/system/avatar/image.jpg",
+    "user_nickname":"john88",
+    "gender":"male",
+    "birthdate":"1997-02-25",
+    "status":"Hello world!",
+    "rank":1,
+    "top_number":0,
+    "kind":"simple"
+  }
+]
+~~~
+
 
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
 
