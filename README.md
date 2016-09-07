@@ -413,7 +413,7 @@ Request params
 ~~~
 
 # Create Transport
-Update Current_user's attributes
+Create new Current_user's Transport
 ~~~bash
 POST http://localhost:3000/api/transports
 ~~~
