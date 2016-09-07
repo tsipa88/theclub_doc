@@ -39,16 +39,16 @@ Response:
   "user_name":"John",
   "user_surname":"Doe",
   "user_avatar":"/system/avatar/903/image.jpg",
-  "avatars":[
-              {
-                "image":"/system/avatar/900/image.jpg","current":true
-              }
-            ],
-  "backgrounds":[
-                  {
-                    "image":"/system/avatar/900/image.jpg","current":true
-                  }
-            ],
+  "avatars_attributes":[
+                        {
+                          "image":"/system/avatar/900/image.jpg","current":true
+                        }
+                       ],
+  "backgrounds_attributes":[
+                            {
+                              "image":"/system/avatar/900/image.jpg","current":true
+                            }
+                           ],
   "likes":[
             {
               "id":1,
@@ -118,13 +118,13 @@ Response
   "user_name":"John",
   "user_surname":"Doe",
   "user_avatar":"/system/avatar/781/4675.jpg",
-  "photos":[
-            {
-              "image":"/system/posts/photo/image/279/image.jpg"
-            },{
-              "image":"/system/posts/photo/image/282/image.jpg"
-            }
-           ],
+  "photos_attributes":[
+                        {
+                          "image":"/system/posts/photo/image/279/image.jpg"
+                        },{
+                          "image":"/system/posts/photo/image/282/image.jpg"
+                        }
+                      ],
   "likes":[
             {
               "id":1,
@@ -280,15 +280,15 @@ Response
     "user_id":1,
     "category_id":1,
     "name":"Pranck Miller Square 6010 K SC",
-    "avatars":[
-                {
-                  "image":"/system/avatar/198/IMG_1621.JPG",
-                  "current":true
-                },{
-                  "image":"/system/avatar/197/IMG_1620.JPG",
-                  "current":false
-                  }
-              ],
+    "avatars_attributes":[
+                          {
+                            "image":"/system/avatar/198/IMG_1621.JPG",
+                            "current":true
+                          },{
+                            "image":"/system/avatar/197/IMG_1620.JPG",
+                            "current":false
+                          }
+                        ],
     "price_on_demand":false,
     "about":"Lorem ipsum dolor ...",
     "city":"Москва",
@@ -330,7 +330,111 @@ Response
 ]
 ~~~
 
+# All Manufacturers
+Get all Manufacturers. 
+~~~bash
+GET http://localhost:3000/api/manufacturers
+~~~
 
+Response
+~~~bash
+[
+  {
+    "id":48,
+    "name":"Audi",
+    "only_rare_models":false
+  },{
+    "id":6,
+    "name":"BMW",
+    "only_rare_models":false
+  }
+]
+~~~
+
+# All Engines
+Get all Engines. 
+~~~bash
+GET http://localhost:3000/api/engines
+~~~
+
+Response
+~~~bash
+[
+  {
+    "id":4,
+    "name_ru":"Бензин атмосферный",
+    "name_en":"Petrol",
+    "transport_kind":"ground"
+  },{
+    "id":5,
+    "name_ru":"Бензин турбо",
+    "name_en":"Petrol Turbo",
+    "transport_kind":"ground"
+  }
+]
+~~~
+
+# All Transmissions
+Get all Transmissions. 
+~~~bash
+GET http://localhost:3000/api/transmissions
+~~~
+
+Response
+~~~bash
+[
+  {
+    "id":5,
+    "name_ru":"Механическая",
+    "name_en":"Manual"
+  },{
+    "id":3,
+    "name_ru":"Автомат",
+    "name_en":"Automatic"
+  }
+]
+~~~
+
+# Update Current_user
+Update Current_user's attributes
+~~~bash
+PUT http://localhost:3000/api/cabinet
+~~~
+
+Request params
+~~~bash
+{
+  name: "John",
+  surname: "Doe",
+  avatars_attributes: image.jpg,
+  status: "Hello world!",
+  backgrounds_attributes: image.jpg
+}
+~~~
+
+# Create Transport
+Update Current_user's attributes
+~~~bash
+POST http://localhost:3000/api/transports
+~~~
+
+Request params
+~~~bash
+{
+  manufacturer_id: 1,
+  model: "Continental GT",
+  engine_id: 5,
+  transmission_id: 3,
+  about: "Самая полная,салон Mulliner,сосояние идеал",
+  power: "560",
+  max_speed: "340",
+  wheel_drive: "all_permanent",
+  acceleration: "4",
+  engine_volume: "6.0",
+  production_year: "2007",
+  kind: "ground"
+}
+~~~
 
 Authentication https://github.com/lynndylanhurley/devise_token_auth#usage-tldr
 
